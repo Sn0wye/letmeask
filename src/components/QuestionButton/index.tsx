@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const DeleteQuestionButton = styled.button`
+export const QuestionButton = styled.button`
   border: 0;
   background: transparent;
   cursor: pointer;

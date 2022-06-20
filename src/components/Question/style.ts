@@ -10,6 +10,19 @@ export const StyledQuestion = styled.div`
     margin-top: 0.5rem;
   }
 
+  &.highlighted {
+    background: #f4f0ff;
+    border: 1px solid #835afd;
+
+    footer .user-ifon span {
+      color: #29292e;
+    }
+  }
+
+  &.answered {
+    background: #dbdcdd;
+  }
+
   p {
     color: #29292e;
   }
@@ -35,6 +48,11 @@ export const StyledQuestion = styled.div`
         color: #737380;
         font-size: 0.875rem;
       }
+    }
+
+    > div {
+      display: flex;
+      gap: 1rem;
     }
   }
 `;
