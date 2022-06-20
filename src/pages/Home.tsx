@@ -8,16 +8,36 @@ import { Button } from "../components/Button";
 import { useAuth } from "../hooks/useAuth";
 
 import "../styles/auth.scss";
+import { FormEvent, useState } from "react";
+import { child, get, ref } from "firebase/database";
+import { database } from "../services/firebase";
 
 export function Home() {
-  const { user, signIn } = useAuth();
   const navigateTo = useNavigate();
+  const { user, signIn } = useAuth();
+  const [roomCode, setRoomCode] = useState("");
 
   async function handleCreateRoom() {
     if (!user) {
       await signIn();
     }
     navigateTo("/rooms/new");
+  }
+
+  async function handleJoinRoom(event: FormEvent) {
+    event.preventDefault();
+
+    if (roomCode.trim() === "") return;
+
+    const roomRef = await ref(database, "rooms");
+    const roomSnapshot = await get(child(roomRef, `${roomCode}`));
+
+    if (!roomSnapshot.exists()) {
+      alert("Room does not exist");
+      return;
+    }
+
+    navigateTo(`/rooms/${roomCode}`);
   }
 
   return (
@@ -38,8 +58,13 @@ export function Home() {
             Crie sua sala com o Google
           </button>
           <div className="separator">ou entre em uma sala</div>
-          <form>
-            <input type="text" placeholder="Digite o código da sala" />
+          <form onSubmit={handleJoinRoom}>
+            <input
+              type="text"
+              placeholder="Digite o código da sala"
+              value={roomCode}
+              onChange={(e) => setRoomCode(e.target.value)}
+            />
             <Button type="submit">Entrar na sala</Button>
           </form>
         </div>

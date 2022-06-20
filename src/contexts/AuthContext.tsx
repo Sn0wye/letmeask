@@ -2,7 +2,7 @@ import { ReactNode, createContext, useState, useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { signInWithGoogle } from "../services/auth";
 import { auth } from "../services/firebase";
-import { AuthContextType, User } from "../types";
+import { AuthContextType, User } from "../types/Auth";
 
 type AuthContextProviderProps = {
   children: ReactNode;
