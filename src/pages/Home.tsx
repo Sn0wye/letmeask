@@ -37,6 +37,11 @@ export function Home() {
       return;
     }
 
+    if (roomSnapshot.val().endedAt) {
+      alert("Room already ended");
+      return;
+    }
+
     navigateTo(`/rooms/${roomCode}`);
   }
 
