@@ -13,15 +13,17 @@
 This project was developed using the following technologies:
 
 - [React](https://reactjs.org)
-- [Firebase](https://firebase.google.com/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Firebase](https://firebase.google.com/)
+- [Styled Components](https://styled-components.com/)
+- [SASS](https://sass-lang.com/)
 
 ## 🚀 Getting started
 
 Clone the project and access the folder.
 
 ```bash
-$ git clone https://github.com/guilhermecapitao/letmeask.git
+$ git clone https://github.com/Sn0wye/letmeask.git
 $ cd letmeask
 ```
 
