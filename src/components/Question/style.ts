@@ -5,10 +5,7 @@ export const StyledQuestion = styled.div`
   border-radius: 0.5rem;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   padding: 1.5rem;
-
-  & + .question {
-    margin-top: 0.5rem;
-  }
+  margin-top: 0.5rem;
 
   &.highlighted {
     background: #f4f0ff;
