@@ -29,7 +29,7 @@ export function NewRoom() {
       authorId: user?.id,
     });
 
-    navigateTo(`/rooms/${firebaseRoom.key}`);
+    navigateTo(`/admin/rooms/${firebaseRoom.key}`);
   }
   return (
     <div id="page-auth">
