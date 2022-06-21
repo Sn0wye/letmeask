@@ -14,6 +14,7 @@ import { database } from "../services/firebase";
 import { push, ref, remove } from "firebase/database";
 
 import "../styles/room.scss";
+import { Link } from "react-router-dom";
 
 type RoomParams = {
   id: string | undefined;
@@ -73,7 +74,9 @@ export function Room() {
     <div id="page-room">
       <header>
         <div className="content">
-          <img src={logoImg} alt="Logo do Letmeask" />
+          <Link to="/">
+            <img src={logoImg} alt="Logo do Letmeask" />
+          </Link>
           <RoomCode code={roomId} />
         </div>
       </header>
