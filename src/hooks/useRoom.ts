@@ -43,6 +43,7 @@ export function useRoom(roomId: string | undefined) {
   useEffect(() => {
     const roomRef = ref(database, `rooms/${roomId}`);
 
+    // Firebase event listener
     onValue(roomRef, (room) => {
       const databaseRoom = room.val();
       const firebaseQuestions: FirebaseQuestions = databaseRoom.questions ?? {};
