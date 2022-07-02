@@ -62,20 +62,8 @@
     }
 
     form {
-      input {
-        height: 3.125rem;
-        border-radius: 0.5rem;
-        padding: 0 1rem;
-        background: #fff;
-        border: 1px solid #a8a8b3;
-      }
-
       button {
         margin-top: 1rem;
-      }
-
-      button,
-      input {
         width: 100%;
       }
     }
