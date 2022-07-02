@@ -1,8 +1,8 @@
-import { ReactNode, createContext, useState, useEffect } from "react";
-import { onAuthStateChanged } from "firebase/auth";
-import { signInWithGoogle } from "../services/auth";
-import { auth } from "../services/firebase";
-import { AuthContextType, User } from "../types/Auth";
+import { ReactNode, createContext, useState, useEffect } from 'react';
+import { onAuthStateChanged } from 'firebase/auth';
+import { signInWithGoogle } from '../services/auth';
+import { auth } from '../services/firebase';
+import { AuthContextType, User } from '../types/Auth';
 
 type AuthContextProviderProps = {
   children: ReactNode;
@@ -18,7 +18,7 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
       if (user) {
         const { displayName, photoURL, uid } = user;
         if (!displayName || !photoURL || !uid) {
-          throw new Error("User is does not have enough data");
+          throw new Error('User is does not have enough data');
         }
         setUser({
           name: displayName,
@@ -32,9 +32,8 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
   }, []);
 
   const signIn = async () => {
-    await signInWithGoogle().then((loggedUser) => {
-      setUser(loggedUser);
-    });
+    const loggedUser = await signInWithGoogle();
+    setUser(loggedUser);
   };
   return (
     <AuthContext.Provider value={{ user, signIn }}>
