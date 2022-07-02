@@ -20,7 +20,7 @@
     }
 
     strong {
-      font: 700 2.25rem "Popins", sans-serif;
+      font: 700 2.25rem 'Popins', sans-serif;
       line-height: 2.625rem;
       margin-top: 1rem;
     }
@@ -58,7 +58,7 @@
     h2 {
       font-size: 1.5rem;
       margin: 4rem 0 1.5rem;
-      font-family: "Popins", sans-serif;
+      font-family: 'Popins', sans-serif;
     }
 
     form {
@@ -76,58 +76,6 @@
       a {
         color: #e559f9;
       }
-    }
-  }
-
-  .create-room {
-    width: 100%;
-    margin-top: 4rem;
-    height: 3.125rem;
-    border-radius: 0.5rem;
-    font-weight: 500;
-    background: #ea4335;
-    color: #fff;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    cursor: pointer;
-    border: 0;
-
-    transition: filter 0.2s;
-
-    img {
-      margin-right: 0.5rem;
-    }
-
-    &:hover {
-      filter: brightness(0.9);
-    }
-  }
-
-  .separator {
-    font-size: 0.875rem;
-    color: #a8a8b3;
-
-    margin: 2rem 0;
-    display: flex;
-    align-items: center;
-
-    &::before {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: #a8a8b3;
-      margin-right: 1rem;
-    }
-
-    &::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: #a8a8b3;
-      margin-left: 1rem;
     }
   }
 }
