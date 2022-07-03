@@ -37,26 +37,26 @@ export function NewRoom() {
       <aside>
         <img
           src={illustrationImg}
-          alt='Ilustração simbolizando perguntas e respostas'
+          alt='Illustration symbolizing questions and answers'
         />
-        <strong>Crie salas de Q&amp;A ao-vivo</strong>
-        <p>Tire as dúvidas da sua audiência em tempo-real</p>
+        <strong>Create Q&amp; Live Rooms</strong>
+        <p>Ask questions of your audience in real time</p>
       </aside>
       <main>
         <div className='main-content'>
           <img src={logoImg} alt='Letmeask Logo' />
-          <h2>Criar uma nova sala</h2>
+          <h2>Create a new room</h2>
           <form onSubmit={handleCreateRoom}>
             <Input
               type='text'
-              placeholder='Nome da sala'
+              placeholder='Room name'
               value={newRoom}
               onChange={(e) => setNewRoom(e.target.value)}
             />
-            <Button type='submit'>Criar sala</Button>
+            <Button type='submit'>Create Room</Button>
           </form>
           <p>
-            Quer entrar em uma sala existente? <Link to='/'>Clique aqui</Link>
+            Want to enter a existing room? <Link to='/'>Click here</Link>
           </p>
         </div>
       </main>
