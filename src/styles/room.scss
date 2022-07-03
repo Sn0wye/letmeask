@@ -38,7 +38,7 @@
       align-items: center;
 
       h1 {
-        font-family: "Popins", sans-serif;
+        font-family: 'Popins', sans-serif;
         font-size: 1.5rem;
         color: #29292e;
       }
@@ -55,17 +55,6 @@
     }
 
     form {
-      textarea {
-        width: 100%;
-        border: 0;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        background: #fefefe;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-        resize: vertical;
-        min-height: 8.125rem;
-      }
-
       .form-footer {
         display: flex;
         justify-content: space-between;

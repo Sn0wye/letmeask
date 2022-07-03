@@ -15,6 +15,7 @@ import { push, ref, remove } from 'firebase/database';
 
 import '../styles/room.scss';
 import { Link } from 'react-router-dom';
+import { Textarea } from '../components/Styled';
 
 type RoomParams = {
   id: string | undefined;
@@ -88,7 +89,7 @@ export function Room() {
         </div>
 
         <form onSubmit={handleSendQuestion}>
-          <textarea
+          <Textarea
             placeholder='What to you want to ask?'
             value={newQuestion}
             onChange={(e) => setNewQuestion(e.target.value)}

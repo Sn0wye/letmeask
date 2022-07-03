@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const LikeButton = styled.button`
   border: 0;
@@ -12,7 +12,9 @@ export const LikeButton = styled.button`
   gap: 0.5rem;
 
   &:hover {
-    filter: brightness(0.7);
+    svg path {
+      stroke: #835afd;
+    }
   }
 
   &.liked {
