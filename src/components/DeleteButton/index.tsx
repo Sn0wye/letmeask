@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const QuestionButton = styled.button`
+export const DeleteButton = styled.button`
   border: 0;
   background: transparent;
   cursor: pointer;
@@ -12,9 +12,8 @@ export const QuestionButton = styled.button`
   gap: 0.5rem;
 
   &:hover {
-    svg path,
-    circle {
-      stroke: #835afd;
+    svg path {
+      stroke: #e73f5d;
     }
   }
 `;
