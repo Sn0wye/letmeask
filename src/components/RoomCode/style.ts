@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const RoomCodeStyled = styled.button`
   height: 2.5rem;
@@ -28,5 +28,11 @@ export const RoomCodeStyled = styled.button`
     width: 14.375rem;
     font-size: 0.875rem;
     font-weight: 500;
+  }
+
+  &:hover {
+    div {
+      filter: brightness(0.9);
+    }
   }
 `;
